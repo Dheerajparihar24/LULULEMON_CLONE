@@ -1,18 +1,19 @@
 import { Box, Flex, Grid, Heading, Image, Link, Text } from "@chakra-ui/react";
 import promoPhoto from "../../../../assets/images/W_Run_MegaNavPromo_Running.webp";
 
-export const DropdownMenu = ({ menuSection , promoData}) => {
-  console.log(promoData)
+export const DropdownMenu = ({ menuSection, promoData }) => {
+  console.log(promoData);
   return (
     <Box
-      position="fixed" // Makes it relative to the viewport
-      top="100px" // Adjust based on your navbar height
+      position="fixed"
+      top="95px"
       left="0"
       bg="white"
       boxShadow="lg"
       zIndex="1000"
       fontSize="sm"
-      width="100vw" // Makes it full width
+      width="100vw"
+      py={5}
     >
       <Box width="80%" m="auto" p={4}>
         <Box display="flex" justifyContent="space-between" width="100%">
@@ -22,9 +23,21 @@ export const DropdownMenu = ({ menuSection , promoData}) => {
             <Grid gap={6} borderRight="1px solid black" px={4}>
               {menuSection.slice(0, 1).map((section, index) => (
                 <Box key={index}>
-                  <Text>{section.title}</Text>
+                  <Text fontSize="16px" fontWeight="normal">
+                    {section.title}
+                  </Text>
                   {section.links.map((link, i) => (
-                    <Link key={i} display="block" py={1}>
+                    <Link
+                      key={i}
+                      display="block"
+                      py={1}
+                      fontSize="16px"
+                      fontWeight="normal"
+                      border="2px solid transparent"
+                      _hover={{
+                        borderBottom: "2px solid read",
+                      }}
+                    >
                       {link}
                     </Link>
                   ))}
@@ -36,12 +49,18 @@ export const DropdownMenu = ({ menuSection , promoData}) => {
             <Box gap={6} px={4}>
               {menuSection.slice(1, 2).map((section, index) => (
                 <Box key={index}>
-                  <Text mb="5px" color="black">
+                  <Text mb="5px" color="black" fontWeight="600">
                     {section.title}
                   </Text>
                   <Grid templateColumns="repeat(2, 1fr)" gap={2}>
                     {section.links.map((link, i) => (
-                      <Link key={i} display="block">
+                      <Link
+                        key={i}
+                        display="block"
+                        fontSize="16px"
+                        marginRight={2}
+                        fontWeight="normal"
+                      >
                         {link}
                       </Link>
                     ))}
@@ -58,7 +77,13 @@ export const DropdownMenu = ({ menuSection , promoData}) => {
                     {section.title}
                   </Text>
                   {section.links.map((link, idx) => (
-                    <Link key={idx} display="block" py="1">
+                    <Link
+                      key={idx}
+                      display="block"
+                      py="1"
+                      fontSize="16px"
+                      fontWeight="normal"
+                    >
                       {link}
                     </Link>
                   ))}
@@ -71,7 +96,7 @@ export const DropdownMenu = ({ menuSection , promoData}) => {
           <Box w="380px" ml={5}>
             <Image src={promoData.image} borderRadius={4} />
             <Heading>Hit the road, pack.</Heading>
-            <Text noOfLines={2}>
+            <Text noOfLines={2} fontWeight="normal">
               This limitless gear stays the course for as long as you and your
               run crew do.
             </Text>
@@ -81,7 +106,21 @@ export const DropdownMenu = ({ menuSection , promoData}) => {
           </Box>
         </Box>
       </Box>
-      <Box w="100%" height="50px" bg="blackAlpha.100"></Box>
+      <Box w="100%" bg="blackAlpha.100" fontWeight="normal">
+        {menuSection.slice(3, 4).map((section, i) => (
+          <Flex width="80%" m="auto" justifyContent="center" p={4}>
+            <Box width="200px">{section.title}</Box>
+            <Box width="100%" as="ul" display="flex">
+              {section.links.map((link, index) => (
+                <Text key={index} as="li" marginRight="3rem">
+                  {link}
+                </Text>
+              ))}
+            </Box>
+            <Box width="200px"> {section.direction} </Box>
+          </Flex>
+        ))}
+      </Box>
     </Box>
   );
 };
