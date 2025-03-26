@@ -17,6 +17,8 @@ import {
   w_promoData,
   menMenu,
   m_promoData,
+  bagsMenu,
+  bagsPromoData,
 } from "../../../data/menuData";
 
 export const MainNav = () => {
@@ -63,6 +65,18 @@ export const MainNav = () => {
           gap={4}
           w="609px"
           justifyContent="center"
+          css={{
+            "& > li": {
+              fontWeight: "bold",
+              position: "relative",
+              paddingBottom: "5px",
+              borderBottom: "3px solid transparent",
+              transition: "border-bottom-color 0.3s ease",
+              "&:hover": {
+                borderBottomColor: "black",
+              },
+            },
+          }}
         >
           <Box
             as="li"
@@ -80,7 +94,6 @@ export const MainNav = () => {
           <Box
             as="li"
             position="relative"
-            fontWeight="bold"
             onMouseEnter={() => handleMouseEnter("men")}
             onMouseLeave={handleMouseLeave}
           >
@@ -90,19 +103,25 @@ export const MainNav = () => {
             )}
           </Box>
 
-          <Box as="li" fontWeight="bold">
+          <Box
+            as="li"
+            position="relative"
+            onMouseEnter={() => handleMouseEnter("bags")}
+            onMouseLeave={handleMouseLeave}
+          >
             <Link to="/bags">Bags</Link>
+            {hoverMenu === "bags" && (
+              <DropdownMenu menuSection={bagsMenu} promoData={bagsPromoData} />
+            )}
           </Box>
 
-          <Box as="li" fontWeight="bold">
+          <Box as="li">
             <Link to="/accessories">Accessories</Link>
           </Box>
 
-          <Box as="li" fontWeight="bold">
-            Shoes
-          </Box>
+          <Box as="li">Shoes</Box>
 
-          <Box as="li" fontWeight="bold" color="red">
+          <Box as="li" color="red">
             Member Offer
           </Box>
         </Box>

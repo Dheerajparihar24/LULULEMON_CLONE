@@ -1,5 +1,6 @@
 import w_promoPhoto from "../assets/images//W_Run_MegaNavPromo_Running.webp";
 import m_promoPhoto from "../assets/images/MembershipMadness.webp";
+import bagPhoto from "../assets/images/Bags_image.webp";
 
 export const womenMenu = [
   {
@@ -56,7 +57,7 @@ export const womenMenu = [
   {
     title: "ACTIVITY",
     links: ["Running", "Workout", "Casual", "Yoga", "Golf", "Tennis"],
-    direction: "SHOP ALL WOMEN-->",
+    direction: "SHOP ALL WOMEN",
   },
 ];
 
@@ -130,4 +131,48 @@ export const m_promoData = {
   title: "Your lucky days.",
   description:
     "Your purchase of $100 or more earns you an entry into the Prize Draw to win one of 64 prize packages.",
+};
+
+export const bagsMenu = [
+  {
+    title: "What's New",
+    links: [
+      "Bestsellers",
+      "Mini Bags",
+      "Everywhere Bags Shop",
+      "Travel Bags",
+      "Spring Bags",
+      "We Made Too Much",
+    ],
+  },
+  {
+    title: "BAG TYPES",
+    links: [
+      "Backpacks",
+      "Bag Accessories",
+      "Belt Bags",
+      "Crossbody Bags",
+      "Duffle Bags",
+      "Keychains",
+      "Shoulder Bags",
+      "Totes",
+      "Wallets & Pouches",
+    ],
+  },
+  {
+    title: "BAG COLLECTIONS",
+    links: ["City Essentials", "Everywhere", "Leather Alternative"],
+  },
+  {
+    title: "BAGS BY ACTIVITY",
+    links: ["Casual", "Travel", "Work", "Workout"],
+    direction: "SHOP BAGS",
+  },
+];
+
+export const bagsPromoData = {
+  image: bagPhoto,
+  title: "Your plus-one for summer.",
+  description:
+    "From coffee runs to weekend getaways, the City Essential Shoulder Bag will always be your top pick.",
 };

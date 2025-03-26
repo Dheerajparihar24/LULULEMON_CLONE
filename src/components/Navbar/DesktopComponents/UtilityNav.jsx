@@ -15,7 +15,15 @@ export const UtilityNav = () => {
       className="utilityNav-bar"
       w="100%"
     >
-      <Box display="flex" gap={6} maxW="85rem" w="100%" m="0 auto" justifyContent="flex-end">
+      <Box
+        display="flex"
+        gap={6}
+        maxW="85rem"
+        w="100%"
+        m="0 auto"
+        justifyContent="flex-end"
+        fontSize="13px"
+      >
         {/* Store Location */}
         <Flex
           alignItems="center"

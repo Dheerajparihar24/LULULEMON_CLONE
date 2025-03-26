@@ -1,5 +1,4 @@
 import { Box, Flex, Grid, Heading, Image, Link, Text } from "@chakra-ui/react";
-import promoPhoto from "../../../../assets/images/W_Run_MegaNavPromo_Running.webp";
 
 export const DropdownMenu = ({ menuSection, promoData }) => {
   console.log(promoData);
@@ -9,7 +8,7 @@ export const DropdownMenu = ({ menuSection, promoData }) => {
       top="95px"
       left="0"
       bg="white"
-      boxShadow="lg"
+      // boxShadow="lg"
       zIndex="1000"
       fontSize="sm"
       width="100vw"
@@ -20,7 +19,7 @@ export const DropdownMenu = ({ menuSection, promoData }) => {
           {/* Section-1 */}
           <Flex gap={6}>
             {/* First Column */}
-            <Grid gap={6} borderRight="1px solid black" px={4}>
+            <Grid borderRight="1px solid gray" width="200px">
               {menuSection.slice(0, 1).map((section, index) => (
                 <Box key={index}>
                   <Text fontSize="16px" fontWeight="normal">
@@ -31,12 +30,8 @@ export const DropdownMenu = ({ menuSection, promoData }) => {
                       key={i}
                       display="block"
                       py={1}
-                      fontSize="16px"
+                      fontSize="15px"
                       fontWeight="normal"
-                      border="2px solid transparent"
-                      _hover={{
-                        borderBottom: "2px solid read",
-                      }}
                     >
                       {link}
                     </Link>
@@ -46,7 +41,7 @@ export const DropdownMenu = ({ menuSection, promoData }) => {
             </Grid>
 
             {/* Second Column */}
-            <Box gap={6} px={4}>
+            <Box>
               {menuSection.slice(1, 2).map((section, index) => (
                 <Box key={index}>
                   <Text mb="5px" color="black" fontWeight="600">
@@ -57,7 +52,7 @@ export const DropdownMenu = ({ menuSection, promoData }) => {
                       <Link
                         key={i}
                         display="block"
-                        fontSize="16px"
+                        fontSize="15px"
                         marginRight={2}
                         fontWeight="normal"
                       >
@@ -81,7 +76,7 @@ export const DropdownMenu = ({ menuSection, promoData }) => {
                       key={idx}
                       display="block"
                       py="1"
-                      fontSize="16px"
+                      fontSize="15px"
                       fontWeight="normal"
                     >
                       {link}
@@ -93,7 +88,7 @@ export const DropdownMenu = ({ menuSection, promoData }) => {
           </Flex>
 
           {/* Section-2 */}
-          <Box w="380px" ml={5}>
+          <Box w="380px">
             <Image src={promoData.image} borderRadius={4} />
             <Heading>Hit the road, pack.</Heading>
             <Text noOfLines={2} fontWeight="normal">
@@ -117,7 +112,9 @@ export const DropdownMenu = ({ menuSection, promoData }) => {
                 </Text>
               ))}
             </Box>
-            <Box width="200px"> {section.direction} </Box>
+            <Box width="200px" fontWeight="bold">
+              {section.direction}
+            </Box>
           </Flex>
         ))}
       </Box>
