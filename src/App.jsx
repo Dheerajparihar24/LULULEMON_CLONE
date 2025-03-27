@@ -5,7 +5,7 @@ import MenSection from "./pages/MenSection";
 import Bags from "./pages/Bags";
 import Accessories from "./pages/Accessories";
 import Cart from "./pages/Cart";
-// import { Header } from "./components/Navbar/Header";
+import { ProductDetails } from "./components/ProductDetails";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
           <Route path="/bags" element={<Bags />} />
           <Route path="/accessories" element={<Accessories />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
       </Router>
     </>
