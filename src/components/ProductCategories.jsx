@@ -16,7 +16,7 @@ export const ProductCategories = () => {
 
   const categories = activeSection === "men" ? menCategories : womenCategories;
   return (
-    <Box>
+    <Box marginBottom={20}>
       <Heading fontSize="30px" my={4}>
         Shop popular categories.
       </Heading>

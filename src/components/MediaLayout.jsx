@@ -2,9 +2,9 @@ import { Box, Heading, Image, Text } from "@chakra-ui/react";
 
 import { ButtonComponent } from "./ButtonComponent";
 
-export const MediaLayout = ({imgSrc}) => {
+export const MediaLayout = ({ imgSrc }) => {
   return (
-    <Box my={20}>
+    <Box marginBottom={20}>
       <Box w="100%">
         <Image src={imgSrc} w="100%" h="500px" />{" "}
       </Box>
