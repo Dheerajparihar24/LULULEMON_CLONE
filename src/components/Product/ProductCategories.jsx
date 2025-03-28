@@ -8,7 +8,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 
-import { menCategories, womenCategories } from "../data/productCategories";
+import { menCategories, womenCategories } from "../../data/productCategories";
 import { useState } from "react";
 
 export const ProductCategories = () => {
@@ -34,7 +34,12 @@ export const ProductCategories = () => {
       </Flex>
       <Flex gap={6}>
         {categories.map((category, index) => (
-          <Card.Root maxW="sm" overflow="hidden" key={category.id} cursor="pointer">
+          <Card.Root
+            maxW="sm"
+            overflow="hidden"
+            key={category.id}
+            cursor="pointer"
+          >
             <Image src={category.image} />
             <Card.Footer display="flex" justifyContent="center" my={3}>
               <Text fontWeight="semibold">{category.name}</Text>

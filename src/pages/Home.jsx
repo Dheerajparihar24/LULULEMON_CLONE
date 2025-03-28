@@ -1,17 +1,19 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { Header } from "../components/Navbar/Header";
 import { HeroSection } from "../components/HeroSection/HeroSection";
-import { ProductCarousel } from "../components/ProductCarousel";
+import { ProductCarousel } from "../components/Product/ProductCarousel";
 import { MediaLayout } from "../components/MediaLayout";
-import { ProductCategories } from "../components/ProductCategories";
+import { ProductCategories } from "../components/Product/ProductCategories";
 import W_Yoga_Img from "../assets/images/W_Yoga_MediaAction_D_WhatsNew.webp";
 import { ThinBanner } from "../components/ThinBanner";
 import { ButtonComponent } from "../components/ButtonComponent";
+import { MobileNavbar } from "../components/Navbar/MobileComponent/MobileNavbar";
 
 const Home = () => {
   return (
     <Box backgroundColor="white">
       <Header />
+      {/* <MobileNavbar/> */}
       <Box w="90%" m="auto">
         <HeroSection />
         <ProductCarousel />

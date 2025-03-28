@@ -143,7 +143,9 @@ export const MainNav = () => {
             </InputGroup>
           </Box>
 
-          <Box as={MdOutlineAccountCircle} w="38px" h="32px" />
+          <Link to="/account/login">
+            <Box as={MdOutlineAccountCircle} w="38px" h="32px" />
+          </Link>
           <Box as={GoHeart} w="38px" h="32px" />
           <Link to="/cart">
             <Box as={RiShoppingBag2Line} w="38px" h="32px" />

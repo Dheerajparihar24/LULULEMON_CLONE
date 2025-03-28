@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
-import { products } from "../data/productsData";
+import { products } from "../../data/productsData";
 
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
@@ -17,7 +17,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { ProductCard } from "./ProductCard";
-import { ButtonComponent } from "./ButtonComponent";
+import { ButtonComponent } from "../ButtonComponent";
 
 export const ProductCarousel = () => {
   return (
