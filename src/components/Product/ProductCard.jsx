@@ -17,7 +17,7 @@ export const ProductCard = ({ product }) => {
         <Image src={isHovered ? product.hoverImage : product.image} />
 
         {/* Show Color Options on Hover */}
-        {isHovered && (
+        {/* {isHovered && (
           <HStack
             position="absolute"
             // bottom="10px"
@@ -38,7 +38,7 @@ export const ProductCard = ({ product }) => {
               />
             ))}
           </HStack>
-        )}
+        )} */}
       </Box>
 
       <Flex
