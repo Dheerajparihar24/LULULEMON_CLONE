@@ -39,6 +39,7 @@ export const ProductCategories = () => {
             overflow="hidden"
             key={category.id}
             cursor="pointer"
+            bg="white"
           >
             <Image src={category.image} />
             <Card.Footer display="flex" justifyContent="center" my={3}>
