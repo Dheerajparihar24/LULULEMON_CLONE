@@ -1,25 +1,14 @@
-import {
-  Box,
-  Button,
-  Field,
-  Heading,
-  Image,
-  Input,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Field, Heading, Image, Input } from "@chakra-ui/react";
 import login_brand_Icon from "../../components/LogIn/login_brand_Icon.svg";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { loginUser } from "../../redux/actions/userActions";
+import { registerUser } from "../../redux/actions/userActions";
 
-import { useNavigate } from "react-router-dom";
+import { Toaster, toaster } from "../ui/toaster";
 
-export const LoginForm = ({ onShowRegister }) => {
-  const navigate = useNavigate()
+export const RegisterForm = ({ onShowRegister }) => {
   const dispatch = useDispatch();
   const users = useSelector((state) => state.user.users);
-
 
   const [user, setUser] = useState({
     email: "",
@@ -35,22 +24,25 @@ export const LoginForm = ({ onShowRegister }) => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    const foundUser = users.find(
-      (u) => u.email === user.email && u.password === user.password
-    );
+    if (users.some((u) => u.email === user.email)) {
+      alert("user already exit");
+      return;
+    }
 
     if (user.email === "" || user.password === "") {
-      alert("please fill the form first");
-      return;
-    }
-    if (!foundUser) {
-      alert("User not find please login first");
-      return;
-    }
-    alert("Login successful!");
+      // alert("fill the form");
 
-    dispatch(loginUser(user));
-    navigate("/")
+      toaster.create({
+        title: "Error",
+        description: "Please fill in all fields.",
+        status: "error",
+        isClosable: true,
+      });
+      return;
+    }
+
+    dispatch(registerUser(user));
+    onShowRegister();
   };
   return (
     <Box
@@ -61,7 +53,10 @@ export const LoginForm = ({ onShowRegister }) => {
       maxHeight="450px"
       height="100%"
       p={4}
+      bg="white"
     >
+      <Toaster />
+
       <Image
         src={login_brand_Icon}
         width="50px"
@@ -69,7 +64,7 @@ export const LoginForm = ({ onShowRegister }) => {
         maxWidth="200px"
         objectFit="contain"
       />
-      <Heading as="h2">Sign in or create an account</Heading>
+      <Heading as="h2">Create an account</Heading>
 
       <form style={{ display: "block" }} onSubmit={handleFormSubmit}>
         <Field.Root>
@@ -109,13 +104,13 @@ export const LoginForm = ({ onShowRegister }) => {
           size={{ base: "lg", sm: "md", lg: "xl" }}
           type="submit"
         >
-          Login
+          CONTINUE
         </Button>
       </form>
 
       <Box textAlign="center">
         <Button variant="link" color="blue" onClick={onShowRegister}>
-          Don’t have an account? Register here
+          Already have an account? Login here
         </Button>
       </Box>
     </Box>
