@@ -28,8 +28,6 @@ export const ProductCarousel = () => {
         </Heading>
       </Flex>
 
-      {/* Navigation Buttons */}
-
       <IconButton
         aria-label="Previous"
         icon={<FaAngleLeft fontSize="24px" />}
@@ -49,12 +47,12 @@ export const ProductCarousel = () => {
         icon={<FaAngleRight fontSize="24px" />}
         position="absolute"
         right="10px"
-        top="50%" // Center it correctly
+        top="50%"
         transform="translateY(-50%)"
         zIndex="10"
         className="next-btn"
-        bg="white"
         boxShadow="md"
+        bg="white"
         _hover={{ bg: "gray.100" }}
       />
 

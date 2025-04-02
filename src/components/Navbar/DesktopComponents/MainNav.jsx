@@ -21,6 +21,8 @@ import {
   bagsPromoData,
 } from "../../../data/menuData";
 
+import { ColorModeButton } from "../../../components/ui/color-mode";
+
 export const MainNav = () => {
   const [hoverMenu, setHoverMenu] = useState(null);
   const [timeoutId, setTimeoutId] = useState(null);
@@ -150,6 +152,9 @@ export const MainNav = () => {
           <Link to="/cart">
             <Box as={RiShoppingBag2Line} w="38px" h="32px" />
           </Link>
+          <Box>
+            <ColorModeButton />
+          </Box>
         </Box>
       </Box>
     </Box>

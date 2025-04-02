@@ -9,7 +9,7 @@ import { useState } from "react";
 export const Login = () => {
   const [showRegister, setShowRegister] = useState(false);
   return (
-    <Flex height="100vh" width="100vw" bg="white">
+    <Flex height="100vh" width="100vw" >
       <Box width="50%" maxHeight="800px">
         <ImageSlider />
       </Box>
@@ -23,9 +23,7 @@ export const Login = () => {
         {showRegister ? (
           <RegisterForm onShowRegister={() => setShowRegister(false)} />
         ) : (
-          <LoginForm
-            onShowRegister={() => setShowRegister(true)} 
-          />
+          <LoginForm onShowRegister={() => setShowRegister(true)} />
         )}
       </Box>
     </Flex>

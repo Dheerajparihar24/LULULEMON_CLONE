@@ -64,10 +64,14 @@ export const ImageSlider = () => {
         <Box>
           {currentImageIndex === 0 ? (
             <>
-              <Heading fontSize="45px" color="white" marginBottom="15px">
+              <Heading
+                fontSize={{ base: "35px", lg: "45px" }}
+                color="white"
+                marginBottom="15px"
+              >
                 Wellbeing made easier.
               </Heading>
-              <Text color="white" fontSize="20px">
+              <Text color="white" fontSize={{ base: "15px", lg: "20px" }}>
                 Discover lululemon Membership, and enjoy benefits like exchanges
                 or credit on sale items, early access to product drops, and
                 partner perks.
@@ -75,10 +79,14 @@ export const ImageSlider = () => {
             </>
           ) : (
             <>
-              <Heading fontSize="45px" color="white" marginBottom="15px">
+              <Heading
+                fontSize={{ base: "35px", lg: "45px" }}
+                color="white"
+                marginBottom="15px"
+              >
                 Partner Perks
               </Heading>
-              <Text color="white" fontSize="20px">
+              <Text color="white" fontSize={{ base: "15px", lg: "20px" }}>
                 Move, fuel, and restore with brands we trust. You’ll find new
                 ways to support your wellbeing, your way, with member-only
                 offers from Oura, La La Land, Barry’s, Erewhon, Life Time, and

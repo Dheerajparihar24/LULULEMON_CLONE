@@ -7,13 +7,12 @@ import { ProductCategories } from "../components/Product/ProductCategories";
 import W_Yoga_Img from "../assets/images/W_Yoga_MediaAction_D_WhatsNew.webp";
 import { ThinBanner } from "../components/ThinBanner";
 import { ButtonComponent } from "../components/ButtonComponent";
-import { MobileNavbar } from "../components/Navbar/MobileComponent/MobileNavbar";
 
 const Home = () => {
   return (
-    <Box backgroundColor="white">
+    <Box>
       <Header />
-      {/* <MobileNavbar/> */}
+
       <Box w="90%" m="auto">
         <HeroSection />
         <ProductCarousel />
@@ -40,13 +39,7 @@ const Home = () => {
           alignItems="center"
           backgroundImage={`url(${"https://images.lululemon.com/is/image/lululemon/na_Mar25_Q1_AppMerchandising_BrandStatement_D?wid=1322&op_usm=0.8,1,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72"})`}
         >
-          <Flex
-            bg="white"
-            display="inline-block"
-            p={4}
-            width="400px"
-            textAlign="center"
-          >
+          <Flex display="inline-block" p={4} width="400px" textAlign="center">
             <Heading marginBottom={2}>Shopping made seamless.</Heading>
             <Text marginBottom={2}>Free shipping. Free returns</Text>
             <ButtonComponent value="LEARN MORE" />

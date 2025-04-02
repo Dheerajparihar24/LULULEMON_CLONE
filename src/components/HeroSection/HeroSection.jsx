@@ -3,7 +3,7 @@ import heroSectionImg from "../../assets/images/heroSectionImg.webp";
 
 export const HeroSection = () => {
   return (
-    <Box w="100%" bg="white">
+    <Box w="100%" >
       <Box
         maxW="1200px"
         height="550px"
@@ -34,9 +34,10 @@ export const HeroSection = () => {
         </Box>
         <Button
           p={4}
-          position="absolute" // Position the button absolutely
+          position="absolute"
           bottom="16px"
           right="16px"
+          bg="white"
         >
           SHOP WHAT'S NEW
         </Button>
