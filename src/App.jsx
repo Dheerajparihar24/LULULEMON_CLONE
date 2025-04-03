@@ -7,7 +7,7 @@ import Accessories from "./pages/Accessories";
 import Cart from "./pages/Cart";
 import { ProductDetails } from "./pages/ProductDetails";
 import { Login } from "./pages/Login";
-import { RegisterForm } from "./components/LogIn/RegisterForm";
+import { Register } from "./pages/Register";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/account/login" element={<Login />} />
-          <Route path="/account/register" element={<RegisterForm />} />
+          <Route path="/account/register" element={<Register />} />
         </Routes>
       </Router>
     </>

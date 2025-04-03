@@ -16,10 +16,9 @@ import { loginUser } from "../../redux/actions/userActions";
 import { useNavigate } from "react-router-dom";
 
 export const LoginForm = ({ onShowRegister }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const users = useSelector((state) => state.user.users);
-
 
   const [user, setUser] = useState({
     email: "",
@@ -50,7 +49,7 @@ export const LoginForm = ({ onShowRegister }) => {
     alert("Login successful!");
 
     dispatch(loginUser(user));
-    navigate("/")
+    navigate("/");
   };
   return (
     <Box
@@ -114,7 +113,11 @@ export const LoginForm = ({ onShowRegister }) => {
       </form>
 
       <Box textAlign="center">
-        <Button variant="link" color="blue" onClick={onShowRegister}>
+        <Button
+          variant="link"
+          color="blue"
+          onClick={() => navigate("/account/register")}
+        >
           Don’t have an account? Register here
         </Button>
       </Box>

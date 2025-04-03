@@ -4,7 +4,7 @@ import { ImageSlider } from "../components/LogIn/ImageSlider";
 import { LoginForm } from "../components/LogIn/LoginForm";
 import { RegisterForm } from "../components/LogIn/RegisterForm";
 
-export const Login = () => {
+export const Register = () => {
   return (
     <Flex height="100vh" width="100vw">
       <Box width="50%" maxHeight="800px">
@@ -17,7 +17,7 @@ export const Login = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <LoginForm />
+        <RegisterForm />
       </Box>
     </Flex>
   );

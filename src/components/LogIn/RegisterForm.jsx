@@ -5,10 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../../redux/actions/userActions";
 
 import { Toaster, toaster } from "../ui/toaster";
+import { useNavigate } from "react-router-dom";
 
-export const RegisterForm = ({ onShowRegister }) => {
+export const RegisterForm = () => {
   const dispatch = useDispatch();
   const users = useSelector((state) => state.user.users);
+  const navigate = useNavigate();
 
   const [user, setUser] = useState({
     email: "",
@@ -109,7 +111,11 @@ export const RegisterForm = ({ onShowRegister }) => {
       </form>
 
       <Box textAlign="center">
-        <Button variant="link" color="blue" onClick={onShowRegister}>
+        <Button
+          variant="link"
+          color="blue"
+          onClick={() => navigate("/account/login")}
+        >
           Already have an account? Login here
         </Button>
       </Box>
