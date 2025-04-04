@@ -21,36 +21,40 @@ import {
 
 export const MobileNavbar = () => {
   return (
-    <Box as="nav" alignItems="center" bg="white" className="mainNav">
-      <Box w="100%" maxW="85rem">
-        {/* Section - 1st  Logo */}
-        <Box w={"186px"} h={"40px"}>
+    <Box as="nav" alignItems="center" bg="white" px={6} marginBottom={4}>
+      <Box maxW="85rem" mx="auto" my={4} display="flex" alignItems="center">
+        <Box
+          w={"186px"}
+          h={"40px"}
+          marginRight={4}
+          display="flex"
+          alignItems="center"
+        >
           <Image src={logo} />
         </Box>
 
-        {/* Section - 2nd  Search & Icons */}
         <Box
           display="flex"
           alignItems="center"
           justifyContent="flex-end"
-          gap={6}
+          gap={{ base: 2, lg: 4 }}
+          width="100%"
         >
-          <Box>
-            <InputGroup
-              startElement={
-                <LuSearch style={{ marginRight: "-40px", fontSize: "16px" }} />
-              }
-            >
-              <Input placeholder="Search" p={4} />
-            </InputGroup>
-          </Box>
-
           <Box as={MdOutlineAccountCircle} w="38px" h="32px" />
-          <Box as={GoHeart} w="38px" h="32px" />
           <Link to="/cart">
             <Box as={RiShoppingBag2Line} w="38px" h="32px" />
           </Link>
         </Box>
+      </Box>
+
+      <Box>
+        <InputGroup
+          startElement={
+            <LuSearch style={{ marginRight: "-40px", fontSize: "16px" }} />
+          }
+        >
+          <Input placeholder="Search" p={4} size={{ base: "md", lg: "xl" }} />
+        </InputGroup>
       </Box>
     </Box>
   );

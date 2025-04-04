@@ -1,5 +1,13 @@
+import { MobileNavbar } from "../components/Navbar/MobileComponent/MobileNavbar";
+
 const Cart = () => {
-  return <h2>Cart page</h2>;
+  const cartProduct = JSON.parse(localStorage.getItem("cart")) || [];
+  console.log(cartProduct);
+  return (
+    <>
+    <MobileNavbar/>
+    </>
+  )
 };
 
 export default Cart;

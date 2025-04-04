@@ -32,8 +32,6 @@ export const RegisterForm = () => {
     }
 
     if (user.email === "" || user.password === "") {
-      // alert("fill the form");
-
       toaster.create({
         title: "Error",
         description: "Please fill in all fields.",
@@ -44,7 +42,8 @@ export const RegisterForm = () => {
     }
 
     dispatch(registerUser(user));
-    onShowRegister();
+    alert("user register successfully");
+    navigate("/account/login");
   };
   return (
     <Box

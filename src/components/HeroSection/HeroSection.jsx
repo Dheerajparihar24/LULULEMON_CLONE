@@ -3,7 +3,7 @@ import heroSectionImg from "../../assets/images/heroSectionImg.webp";
 
 export const HeroSection = () => {
   return (
-    <Box w="100%" >
+    <Box w="100%">
       <Box
         maxW="1200px"
         height="550px"
@@ -20,7 +20,7 @@ export const HeroSection = () => {
         <Box
           p={8}
           bg="white"
-          display="inline-block"
+          display={{ base: "none", lg: "inline-block" }}
           position="absolute"
           left="-100px"
           lineHeight={3}
@@ -32,13 +32,7 @@ export const HeroSection = () => {
           <Text>All Men's</Text>
           <Text>All Accessories</Text>
         </Box>
-        <Button
-          p={4}
-          position="absolute"
-          bottom="16px"
-          right="16px"
-          bg="white"
-        >
+        <Button p={4} position="absolute" bottom="16px" right="16px" bg="white">
           SHOP WHAT'S NEW
         </Button>
       </Box>
