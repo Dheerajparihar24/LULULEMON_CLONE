@@ -21,7 +21,7 @@ import {
 
 export const MobileNavbar = () => {
   return (
-    <Box as="nav" alignItems="center" bg="white" px={6} marginBottom={4}>
+    <Box as="nav" alignItems="center" bg="white" px={6} marginBottom={4} border={{base:"none", lg:"1px solid gray"}}>
       <Box maxW="85rem" mx="auto" my={4} display="flex" alignItems="center">
         <Box
           w={"186px"}
@@ -41,13 +41,19 @@ export const MobileNavbar = () => {
           width="100%"
         >
           <Box as={MdOutlineAccountCircle} w="38px" h="32px" />
+
           <Link to="/cart">
-            <Box as={RiShoppingBag2Line} w="38px" h="32px" />
+            <Box
+              display={{ base: "block", lg: "none" }}
+              as={RiShoppingBag2Line}
+              w="38px"
+              h="32px"
+            />
           </Link>
         </Box>
       </Box>
 
-      <Box>
+      <Box display={{ base: "block", lg: "none" }}>
         <InputGroup
           startElement={
             <LuSearch style={{ marginRight: "-40px", fontSize: "16px" }} />

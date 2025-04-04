@@ -15,7 +15,7 @@ export const MediaLayout = ({ imgSrc }) => {
           just pinch yourself.
         </Text>
         <Box>
-          <ButtonComponent value="SHOP MATCHING SETS" />
+          <ButtonComponent  value="SHOP MATCHING SETS" />
         </Box>
       </Box>
     </Box>
