@@ -21,6 +21,7 @@ export const products = [
     hoverImage:
       "https://images.lululemon.com/is/image/lululemon/LW1FIUS_033454_2?wid=1125&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72",
     colors: ["#E8E6DF", "#000000"],
+    sizes: ["XXXS", "XXS", "XS", "S", "M", "L", "XL"],
   },
   {
     id: 3,
@@ -32,6 +33,7 @@ export const products = [
     hoverImage:
       "https://images.lululemon.com/is/image/lululemon/LW1FIUS_033454_2?wid=1125&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72",
     colors: ["#E8E6DF", "#000000"],
+    sizes: ["XXXS", "XXS", "XS", "S", "M", "L", "XL"],
   },
   {
     id: 4,
@@ -43,6 +45,7 @@ export const products = [
     hoverImage:
       "https://images.lululemon.com/is/image/lululemon/LW1FIUS_033454_2?wid=1125&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72",
     colors: ["#E8E6DF", "#000000"],
+    sizes: ["XXXS", "XXS", "XS", "S", "M", "L", "XL"],
   },
   {
     id: 5,
@@ -53,5 +56,6 @@ export const products = [
     hoverImage:
       "https://images.lululemon.com/is/image/lululemon/LW1FIUS_033454_2?wid=1125&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72",
     colors: ["#E8E6DF", "#000000"],
+    sizes: ["XXXS", "XXS", "XS", "S", "M", "L", "XL"],
   },
 ];
