@@ -81,7 +81,9 @@ export const ProductDetails = () => {
                 colorPalette="red"
                 p={4}
                 width="50%"
-                onClick={() => dispatch(addToCart(product))}
+                onClick={() =>
+                  dispatch(addToCart(product, selectedColor, selectedSize))
+                }
               >
                 <LuShoppingBag />
                 Add to Bag
