@@ -1,3 +1,4 @@
+import { removeFromCart } from "../../redux/actions/cartActions";
 import {
   Box,
   Button,
@@ -9,9 +10,13 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { CiDeliveryTruck } from "react-icons/ci";
+import { useDispatch, useSelector } from "react-redux";
 
 export const MyBag = () => {
-  const cartProduct = JSON.parse(localStorage.getItem("cart")) || [];
+  const dispatch = useDispatch();
+
+  const cartProduct = useSelector((state) => state.cart.cart);
+
   return (
     <VStack align="flex-start">
       <Box gap={2} alignItems="center" marginBottom={2} fontSize="20px">
@@ -21,13 +26,7 @@ export const MyBag = () => {
         <span>({cartProduct.length} Item)</span>
       </Box>
 
-      <Box
-        display="flex"
-        gap={2}
-        alignItems="center"
-        // border="1px solid black"
-        fontSize="14px"
-      >
+      <Box display="flex" gap={2} alignItems="center" fontSize="14px">
         <CiDeliveryTruck size="30px" />
         <Heading fontSize="15px">Ship Items</Heading>
         <Text marginLeft={2}>Arrives within 2-7 business days</Text>
@@ -41,7 +40,9 @@ export const MyBag = () => {
         <Card.Root
           key={index}
           flexDirection="row"
-          border="1px solid black"
+          borderRadius="none"
+          maxWidth="600px"
+          width="100%"
           p={2}
           gap={4}
           maxH="200px"
@@ -68,6 +69,7 @@ export const MyBag = () => {
                 borderRadius="none"
                 borderBottom="1px solid"
                 px={4}
+                onClick={() => dispatch(removeFromCart(product.id))}
               >
                 REMOVE
               </Button>
